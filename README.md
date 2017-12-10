@@ -30,7 +30,7 @@ There are 3 steps that needs to be completed:
 
 ### Fetch and render tweets
 
-You will use standard `fetch` API (with a `GET` method) to get tweets from `http://localhost:3000/tweets`. The list should be ordered by `id` in `desc` order (use lodash `_.orderBy` function). A tweet should be rendered with the following HTML code:
+You will use standard `fetch` API (with a `GET` method) to get tweets from `http://localhost:3000/tweets`. The list should be ordered by `id` in `desc` order. You can use lodash `_.orderBy` function (lodash is already loaded in index.html). A tweet should be rendered with the following HTML code:
 
 ```html
 <div class="tweet">
@@ -72,7 +72,7 @@ On each tweet, a click event should open a modal window. The modal simply shows 
 
 The code within `<div class="tweet is-modal">` is the same code than the one use to render a tweet in the list.
 
-**The code that handles the modal should be in its own JavaScript module.** Export a `Modal` class that takes a tweet object in its constructor. It should have an `open` method and a `close` method.
+**The code that handles the modal should be in its own JavaScript module.** Export a `Modal` class that takes a tweet object in its constructor. It should have an `open` method (add `<div class="modal-overlay">` to document `body`) and a `close` method (remove `<div class="modal-overlay">`).
 
 #### Expected result 👇
 
@@ -83,7 +83,6 @@ The code within `<div class="tweet is-modal">` is the same code than the one use
 The input field should be used to create and add a new tweet to the list, on `enter` key touch event.
 
 Create a `tweet` object with the input value as the tweet `text` and random `fullname` and `username` values. You don't need to set an `id` and an `avatar`.
-
 
 Post this `tweet` object using standard `fetch` API with a `POST` method on `http://localhost:3000/tweets`. Reload the page after the tweet was posted. You should use the default avatar for the new tweets, available at `http://localhost:3000/img/avatar.jpg`.
 
