@@ -52,6 +52,10 @@ Values between `[]` represent the names of the corresponding fields in a tweet o
 
 **The code that handles `http://localhost:3000/tweets` call should be in its own JavaScript module.**
 
+#### Expected result 👇
+
+<img src="https://sciences-u-lyon.github.io/twitter-like/tweets.png" width="600">
+
 ### Display a tweet in a modal on click
 
 On each tweet, a click event should open a modal window. The modal simply shows the tweet in larger size. It should be closed on background (the overlay window) click event. A modal is defined with the following HTML code:
@@ -70,6 +74,10 @@ The code within `<div class="tweet is-modal">` is the same code than the one use
 
 **The code that handles the modal should be in its own JavaScript module.** Export a `Modal` class that takes a tweet object in its constructor. It should have an `open` method and a `close` method.
 
+#### Expected result 👇
+
+<img src="https://sciences-u-lyon.github.io/twitter-like/modal.png" width="600">
+
 ### Post new tweets
 
 The input field should be used to create and add a new tweet to the list, on `enter` key touch event.
@@ -80,5 +88,9 @@ Create a `tweet` object with the input value as the tweet `text` and random `ful
 Post this `tweet` object using standard `fetch` API with a `POST` method on `http://localhost:3000/tweets`. Reload the page after the tweet was posted. You should use the default avatar for the new tweets, available at `http://localhost:3000/img/avatar.jpg`.
 
 **The code that handles the `POST` call should be in the appropriate JavaScript module.**
+
+#### Expected result 👇
+
+<img src="https://sciences-u-lyon.github.io/twitter-like/new-tweet.png" width="600">
 
 # Good Luck! 😉
