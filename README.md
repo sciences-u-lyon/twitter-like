@@ -2,11 +2,16 @@
 
 The goal of this project is to build a *twitter-like* JavaScript application.
 
+## Requirements
+
+- node v9+: https://nodejs.org/en/download/current/
+- Chrome v61+ / Firefox 54+
+
 ## Instructions
 
 ### Back-End
 
-`server` directory is used to serve a REST API with one endpoint: `/tweets`. To start it, go to `server` with your terminal and download dependencies: `npm install` or `yarn`. Then run `npm start` or `yarn start`. Tweets (in JSON format) should be available on `http://localhost:3000/tweets`.
+`server` directory is used to serve a REST API with one endpoint: `/tweets`. To start it, go to `server` with your terminal (`cd path/to/server`) and download dependencies by running: `npm install`. Then run `npm start`. Tweets (in JSON format) should be available on `http://localhost:3000/tweets` (check on your browser).
 
 ### Front-End
 
@@ -30,7 +35,7 @@ There are 3 steps that needs to be completed:
 
 ### Fetch and render tweets
 
-You will use standard `fetch` API (with a `GET` method) to get tweets from `http://localhost:3000/tweets`. The list should be ordered by `id` in `desc` order. You can use lodash `_.orderBy` function (lodash is already loaded in index.html). A tweet should be rendered with the following HTML code:
+You will use standard `fetch` API (with a `GET` method) to get tweets from `http://localhost:3000/tweets`. The list should be ordered by `id` in `desc` order. You can use lodash `_.orderBy` function (lodash is already included in index.html). A tweet should be rendered with the following HTML code:
 
 ```html
 <div class="tweet">
@@ -70,7 +75,7 @@ On each tweet, a click event should open a modal window. The modal simply shows 
 </div>
 ```
 
-The code within `<div class="tweet is-modal">` is the same code than the one use to render a tweet in the list.
+The code within `<div class="tweet is-modal">` is the same code than the one used to render a tweet in the list.
 
 **The code that handles the modal should be in its own JavaScript module.** Export a `Modal` class that takes a tweet object in its constructor. It should have an `open` method (add `<div class="modal-overlay">` to document `body`) and a `close` method (remove `<div class="modal-overlay">`).
 
