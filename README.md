@@ -4,14 +4,14 @@ The goal of this project is to build a *twitter-like* JavaScript application.
 
 ## Requirements
 
-- node v9+: https://nodejs.org/en/download/current/
-- Chrome v61+ / Firefox 54+
+- node v8+: https://nodejs.org/en/download/current/
+- Chrome v61+ / Firefox 54+ (with `dom.moduleScripts.enabled` activated in `about:config`)
 
 ## Instructions
 
 ### Back-End
 
-`server` directory is used to serve a REST API with one endpoint: `/tweets`. To start it, go to `server` with your terminal (`cd path/to/server`) and download dependencies by running: `npm install`. Then run `npm start`. Tweets (in JSON format) should be available on `http://localhost:3000/tweets` (check on your browser).
+`server` directory is used to serve a REST API with one endpoint: `/tweets`. To start it, go to the project root with your terminal (`cd twitter-like`) and download dependencies by running: `yarn / npm install`. Then run `yarn serve / npm serve`. Tweets (in JSON format) should be available on http://localhost:3000/tweets (check on your browser).
 
 ### Front-End
 
@@ -23,7 +23,7 @@ Your JavaScript code will be written within `app/scripts` with ES2015 modules. E
 
 #### live-server
 
-Because of ES2015 modules and ajax requests, the app needs a http server to run correctly. Install `live-server` (globally): `npm install -g live-server`. Then go to `app` with your terminal and run: `live-server`. Your default browser should automatically open at `http://127.0.0.1:8080/`. From now on, every code you write within `app` will trigger a live reload, which means you don't need to refresh your page to see the last results.
+Because of ES2015 modules and ajax requests, the app needs a http server to run correctly. Open a new terminal window and run: `yarn start / npm start`. Your default browser should automatically open at http://127.0.0.1:8080/. From now on, every code you write within `app` will trigger a live reload, which means you don't need to refresh your page to see the last results.
 
 ## Assignments
 
@@ -35,7 +35,7 @@ There are 3 steps that needs to be completed:
 
 ### Fetch and render tweets
 
-You will use standard `fetch` API (with a `GET` method) to get tweets from `http://localhost:3000/tweets`. The list should be ordered by `id` in `desc` order. You can use lodash `_.orderBy` function (lodash is already included in index.html). A tweet should be rendered with the following HTML code:
+You will use standard `fetch` API (with a `GET` method) to get tweets from http://localhost:3000/tweets. The list should be ordered by `id` in `desc` order. You can use lodash `_.orderBy` function (lodash is already included in index.html). A tweet should be rendered with the following HTML code:
 
 ```html
 <div class="tweet">
@@ -53,9 +53,9 @@ You will use standard `fetch` API (with a `GET` method) to get tweets from `http
   </div>
 </div>
 ```
-Values between `[]` represent the names of the corresponding fields in a tweet object. They should be replaced with real tweet data. Each tweet element is a child of `<div class="container">` tag. Each tweet avatar should be fetched by prefixing `http://localhost:3000/` to the `tweet` object `avatar` field.
+Values between `[]` represent the names of the corresponding fields in a tweet object. They should be replaced with real tweet data. Each tweet element is a child of `<div class="container">` tag. Each tweet avatar should be fetched by prefixing http://localhost:3000/ to the `avatar` field of the `tweet` object.
 
-**The code that handles `http://localhost:3000/tweets` call should be in its own JavaScript module.**
+**The code that handles http://localhost:3000/tweets call should be in its own JavaScript module.**
 
 #### Expected result 👇
 
@@ -89,7 +89,7 @@ The input field should be used to create and add a new tweet to the list, on `en
 
 Create a `tweet` object with the input value as the tweet `text` and random `fullname` and `username` values. You don't need to set an `id` and an `avatar`.
 
-Post this `tweet` object using standard `fetch` API with a `POST` method on `http://localhost:3000/tweets`. Reload the page after the tweet was posted. You should use the default avatar for the new tweets, available at `http://localhost:3000/img/avatar.jpg`.
+Post this `tweet` object using standard `fetch` API with a `POST` method on http://localhost:3000/tweets. Reload the page after the tweet was posted. You should use the default avatar for the new tweets, available at http://localhost:3000/img/avatar.jpg.
 
 **The code that handles the `POST` call should be in the appropriate JavaScript module.**
 
