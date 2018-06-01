@@ -9,6 +9,6 @@
   "author": "Nicolas Payot <nicolas.payot@gmail.com> (http://nicolaspayot.github.io/)",
   "license": "MIT",
   "dependencies": {
-    "json-server": "^0.12.1"
+    "json-server": "^0.13.0"
   }
 }

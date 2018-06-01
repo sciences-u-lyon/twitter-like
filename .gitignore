@@ -1,3 +1,5 @@
 .DS_Store
 server/node_modules
 server/db.json
+server/yarn-error.log
+server/npm-debug.log
