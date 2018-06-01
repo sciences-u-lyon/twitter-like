@@ -1,0 +1,25 @@
+{
+  "name": "twitter-like",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "shx cp server/db-init.json server/db.json && json-server server/db.json",
+    "start": "live-server app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sciences-u-lyon/twitter-like.git"
+  },
+  "author": "Nicolas Payot <nicolas.payot@gmail.com> (http://nicolaspayot.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sciences-u-lyon/twitter-like/issues"
+  },
+  "homepage": "https://github.com/sciences-u-lyon/twitter-like#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "json-server": "^0.13.0",
+    "live-server": "^1.2.0",
+    "shx": "^0.2.2"
+  }
+}
